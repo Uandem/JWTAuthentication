@@ -67,8 +67,9 @@ namespace JWTAuthentication.Controllers
         [Route("Detail")]
         public IActionResult UserDetail()
         {
+            System.Windows.Forms.MessageBox.Show("Selamlar");
 
-            var b = 120;
+            var ccc = 120;
 
             return Ok(new { userid = 1 });
 
