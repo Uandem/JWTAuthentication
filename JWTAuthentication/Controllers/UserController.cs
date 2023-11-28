@@ -71,7 +71,7 @@ namespace JWTAuthentication.Controllers
             var ccc = 120;
             if (ccc == 120)
             {
-                return Ok("Başarılı");
+                return Ok("Başarısız");
             }
 
             return Ok(new { userid = 1 });
