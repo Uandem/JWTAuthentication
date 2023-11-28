@@ -68,7 +68,7 @@ namespace JWTAuthentication.Controllers
         public IActionResult UserDetail()
         {
 
-            var b = 120;
+            var ccc = 120;
 
             return Ok(new { userid = 1 });
 
