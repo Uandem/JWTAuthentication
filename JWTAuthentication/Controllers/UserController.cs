@@ -68,8 +68,28 @@ namespace JWTAuthentication.Controllers
         public IActionResult UserDetail()
         {
 
-            var a = 10;
             return Ok(new { userid = 1 });
+
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public IActionResult Test(User user)
+        {
+
+
+            IActionResult result = Unauthorized();
+            var isauth = _userService.Login(new DataModel.UserDMO()
+            {
+                Password = user.Password,
+                Email = user.Email
+            });
+            if (isauth)
+            {
+                var token = GenerateJsonWebToken(user);
+                return Ok(new { token = token });
+            }
+
+            return result;
 
         }
 
