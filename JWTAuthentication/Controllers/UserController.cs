@@ -73,10 +73,7 @@ namespace JWTAuthentication.Controllers
             {
                 return Ok("Başarılı");
             }
-            else
-            {
-                return Ok("Başarısız");
-            }
+           
 
             return Ok(new { userid = 1 });
 
