@@ -68,6 +68,8 @@ namespace JWTAuthentication.Controllers
         public IActionResult UserDetail()
         {
 
+            string furkan = "Gumus";
+
             return Ok(new { userid = 1 });
 
         }
